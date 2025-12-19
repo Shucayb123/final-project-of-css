@@ -1,0 +1,1352 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Poppins1;
+    src: url(Family/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins2;
+    src: url(Family/Poppins-Bold.ttf);
+}
+
+:root{
+    --tijaabo: #64f864;
+    --Cadaan:  #ffffff;
+    --Color01: #000000;
+    --Color02: #6366f1;
+    --Color03: #232d39;
+    --Color04:#232d39cc;
+    --Color05:#7a7a7a;
+    --Color06: #ccc;
+    --Color07: #0056b3;
+    --Color08: #0000001A;
+    
+    
+}
+
+.All{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+  /* Navbar style */
+div.Nav-Section{
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+   
+   
+}
+
+div.Nav-Section nav{
+   width: 100%;
+   height: 100%;
+   background-color: var(--Cadaan);
+   display: grid;
+   grid-template-columns: 400px 60%;
+   grid-template-rows: repeat(1, auto);
+   position: relative;
+   box-shadow: 0px 0px 10px var(--Color08);
+}
+
+div.Nav-Section nav div.Title{
+    font-size: 32px;
+    font-family: Poppins2;
+    color: var(--Color01);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: wrap row;
+    line-height: 80px;
+    cursor: pointer;
+    
+
+}
+
+div.Nav-Section nav div.Title span{
+     color: var(--Color02);
+}
+
+div.Nav-Section nav ul.links{
+    height: 100%;
+    /* background-color: var(--tijaabo); */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: nowrap row;
+    list-style: none; 
+   
+} 
+
+div.Nav-Section nav ul.links li{
+     margin: 0px 20px;
+}
+
+div.Nav-Section nav ul.links li a{
+    text-decoration: none;
+    font-family: Poppins1;
+    color: var(--Color02);
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 500;
+}
+div.Nav-Section nav ul.links li a:hover{
+    color: var(--Color01);
+}
+div.Nav-Section nav ul.links li a.H{
+    color: var(--Color01);
+}
+div.Nav-Section nav ul.links li a.H:hover{
+    color: var(--Color02);
+}
+
+div.Nav-Section nav div.btn{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: nowrap row;
+    list-style: none;
+}
+div.Nav-Section nav div.btn li a{
+    border: none;
+    outline: none;
+    background-color: var(--Color02);
+    color: var(--Cadaan);
+    margin: 0px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration:none;
+    font-family: Poppins1;
+    transition: all 0.3s ease-in-out;
+    border: solid 1.5px transparent;
+}
+div.Nav-Section nav div.btn li a:hover{
+    background-color: var(--Color02);
+    color: var(--Color01);
+}
+div.bar-icon{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: wrap column;
+}
+div.MobileIcon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    background-color: var(--Color02);
+    border-radius: 5px;
+    cursor: pointer;
+}
+div.MobileNav{
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    padding: 15px 15px;
+    background-color: var(--Cadaan);
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0px, 30px);
+    transition: all 0.6s  ease-in-out;
+}
+div.MobileNav.Active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+div.MobileNav ul.linksMobile{
+    height: 100%;
+    /* background-color: var(--tijaabo); */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: nowrap column;
+    list-style: none; 
+    
+} 
+
+div.MobileNav ul.linksMobile li{
+     margin: 0px 5px;
+}
+
+div.MobileNav ul.linksMobile li a{
+    text-decoration: none;
+    font-family: Poppins1, sans-serif;
+    color: var(--Color02);
+    font-size: 13px;
+    line-height: 35px;
+    font-weight: 500;
+}
+div.MobileNav ul.linksMobile li a:hover{
+    color: var(--Color01);
+}
+div.MobileNav ul.linksMobile li a.H{
+    color: var(--Color01);
+}
+div.MobileNav ul.linksMobile li a.H:hover{
+    color: var(--Color02);
+}
+
+div.MobileNav ul.linksMobile div.btn{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: nowrap row;
+    list-style: none;
+}
+div.MobileNav ul.linksMobile div.btn li a{
+    border: none;
+    outline: none;
+    background-color: var(--Color02);
+    color: var(--Cadaan);
+    margin: 0px 1px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration:none;
+    font-family: Poppins1;
+    transition: all 0.3s ease-in-out;
+    border: solid 1.5px transparent;
+}
+div.MobileNav ul.linksMobile div.btn li a:hover{
+    background-color: var(--Color02);
+    color: var(--Color01);
+}
+
+
+
+
+
+     /* Background style */
+div.videos{
+    width: 100%;
+    height: 100%;
+     
+} 
+
+div.videos div.background{
+    width: 100%;
+    height: 100;
+ 
+}
+div.videos div.background div.video video.background-vidoes{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+div.videos div.background div.Title_desc{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--Color04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+}
+div.videos div.background div.Title_desc p{
+     font-family: Poppins2;
+     color: var(--Cadaan);
+     font-size: 18px;
+     line-height: 22px;
+     font-weight: 800;
+}
+div.videos div.background div.Title_desc h2{
+    font-family: Poppins2;
+    color: var(--Cadaan);
+    font-size: 84px;
+    line-height: 101px;
+    font-weight: 800;
+}
+div.videos div.background div.Title_desc h2 span{
+    color: var(--Color02);
+}
+div.videos div.background div.Title_desc div.btn_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap row;
+    
+}
+div.videos div.background div.Title_desc div.btn_2 button{
+    border: none;
+    outline: none;
+    background-color: var(--Color02);
+    color: var(--Cadaan);
+    margin: 0px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration:none;
+    font-family: Poppins1; 
+    font-weight: 400;
+}
+
+
+     /* Program style */
+section.Programs{
+    width: 100%;
+    height: 100%;
+    padding: 8% 0px;
+  
+}
+section.Programs div.program{
+    width: 100%;
+    height: 100%;
+   
+}
+section.Programs div.program div.captions{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    
+}
+section.Programs div.program div.captions h2{
+    font-family: Poppins2;
+    color: var(--Color03);
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 800;
+   
+}
+section.Programs div.program div.captions h2 span{
+    color: var(--Color02);
+}
+section.Programs div.program div.captions img{
+    margin: 20px 0px;
+}
+section.Programs div.program div.captions p{
+    font-family: Poppins1;
+    color: var(--Color05);
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+section.Programs div.program div.card_grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    margin: 40px 0px;
+}
+section.Programs div.program div.card_grid div.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap row;
+    margin-left: 30px;
+    padding: 10px 0px;
+
+}
+section.Programs div.program div.card_grid div.cards div.card_info{
+    margin: 0px 20px;
+   
+}
+section.Programs div.program div.card_grid div.cards div.card_info h3{
+    font-family:  Poppins1;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 600;
+    color: var(--Color03);
+}
+section.Programs div.program 
+div.card_grid div.cards 
+div.card_info p{
+    font-family: Poppins1;
+    color: var(--Color05);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 8px 0px;
+}
+section.Programs div.program 
+div.card_grid div.cards 
+div.card_info p span{
+     color: var(--Color07);
+     font-weight: 500;
+}
+section.Programs div.program div.card_grid div.cards div.card_info div.card_btn a{
+    border: none;
+    outline: none;
+    color: var(--Color02);
+    /* padding: 10px 10px; */
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration: none;
+    font-family: Poppins1; 
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+
+    /* Don't think style */
+div.Today{
+    width: 100%;
+    height: 100%;
+    
+}
+
+div.Today div.todays{
+    width: 100%;
+    height: 100%;
+   
+    
+}
+div.Today div.todays div.background-image{
+    padding: 100px 0px;
+    background-image: url(Videos/cta-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+div.Today div.todays div.Title_desc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+}
+div.Today div.todays div.Title_desc h2{
+    font-family: Poppins2;
+    color: var(--Cadaan);
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 800;
+}
+div.Today div.todays div.Title_desc p{
+     font-family: Poppins1;
+     color: var(--Cadaan);
+     font-size: 16px;
+     line-height: 25px;
+     font-weight: 400;
+     text-align: center;
+     margin: 15px 0px;
+}
+div.Today div.todays div.Title_desc h2 span{
+    color: var(--Color02);
+}
+div.Today div.todays div.Title_desc div.btn_3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap row;
+    
+}
+div.Today div.todays div.Title_desc div.btn_3 button{
+    border: none;
+    outline: none;
+    background-color: var(--Color02);
+    color: var(--Cadaan);
+    margin: 0px 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 23px;
+    text-decoration:none;
+    font-family: Poppins1; 
+    font-weight: 400;
+}
+
+
+
+     /* Classes style */
+section.Classes{
+    width: 100%;
+    height: 100%;
+    padding: 8% 0px;
+}
+section.Classes div.Class{
+    width: 100%;
+    height: 100%;
+   
+}
+section.Classes div.Class div.Head{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    
+}
+section.Classes div.Class div.Head h2{
+    font-family: Poppins2;
+    color: var(--Color03);
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 800;
+   
+}
+section.Classes div.Class div.Head h2 span{
+    color: var(--Color02);
+}
+section.Classes div.Class div.Head img{
+    margin: 20px 0px;
+}
+section.Classes div.Class div.Head p{
+    font-family: Poppins1;
+    color: var(--Color05);
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+section.Classes div.Class div.grid_picture{
+    width: 100%;
+    height: 100%;
+    padding: 0px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: nowrap row;
+}
+section.Classes div.Class div.grid_picture div.part1 ul{
+   padding: 20px 0px;
+   list-style: none; 
+   
+
+}
+section.Classes div.Class div.grid_picture div.part1 ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    margin: 25px 0px;
+
+}
+section.Classes div.Class div.grid_picture div.part1 ul li a{
+    text-decoration: none;
+    padding: 30px 80px;
+    display: inline-block;
+    background-color: var(--Cadaan);
+    border-radius: 5px;
+    font-size: 20px;
+    color: var(--Color03);
+    line-height: 29px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px var(--Color08);
+}
+section.Classes div.Class div.grid_picture div.part1 ul li a.a1{
+    color: var(--Color02);
+}
+section.Classes div.Class div.grid_picture div.part1 div.li_btn li a{
+    padding: 30px 120px;
+   background-color: var(--Color02);
+   color: var(--Cadaan);
+}
+section.Classes div.Class div.grid_picture div.part2{
+    width: 60%;
+    /* height: 550px; */
+    padding: 50px 0px 0px 0px;
+    
+  
+}
+section.Classes div.Class div.grid_picture div.part2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+section.Classes div.Class div.grid_picture div.part2 div.down_picture{
+    width: 100%;
+    height: 100%;
+    /* background-color: var(--tijaabo); */
+}
+section.Classes div.Class div.grid_picture div.part2 div.down_picture h4{
+    font-family: Poppins2;
+    color: var(--Color03);
+    font-size: 23px;
+    line-height: 38px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+section.Classes div.Class div.grid_picture div.part2 div.down_picture p{
+    font-family: Poppins1;
+    color: var(--Color05);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400; 
+    margin: 15px 0px;
+}
+section.Classes div.Class div.grid_picture div.part2 div.down_picture div.down_btn a{
+  text-decoration: none;
+  display: inline-block;
+  font-family: Poppins1;
+  font-size: 15px;
+  padding: 12px 20px;
+  background-color: var(--Color02);
+  color: var(--Cadaan);
+  font-weight: 400;
+  line-height: 23px;
+}
+
+
+
+   /* Table Style */
+div.Tables{
+    width: 100%;
+    height: 100%;
+}
+div.Tables div.table{
+    width: 100%;
+    height: 100%;
+   
+   
+}
+div.Tables div.table div.back_img{
+    padding: 100px 0px;
+    background-image: url(Videos/schedule-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center; 
+}
+div.Tables div.table div.back_img div.header{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    
+} 
+div.Tables div.table div.back_img div.header h2{
+    font-family: Poppins2;
+    color: var(--Cadaan);
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 800;
+   
+}
+div.Tables div.table div.back_img div.header img{
+    font-size: 16px ;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: Poppins1;
+    padding: 10px 0px;
+}
+div.Tables div.table div.back_img div.header h2 span{
+   color: var(--Color02); 
+}
+div.Tables div.table div.back_img div.header p{
+    font-family: Poppins1;
+    color: var(--Cadaan);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400; 
+    margin: 15px 0px;
+}
+div.Tables div.table div.back_img div.overlay {
+    min-height: 100%;
+    padding: 50px 17%;
+}
+
+div.Tables div.table div.back_img div.overlay div.days {
+     margin-bottom: 40px;
+}
+
+div.Tables div.table div.back_img div.overlay div.days a {
+    color: var(--Cadaan);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 23px;
+    font-family: Poppins1;
+    font-weight: 500;
+    text-align: center;
+   
+}
+div.Tables div.table div.back_img div.overlay div.days a.active{
+    color: var(--Color02);
+}
+div.Tables div.table div.back_img div.overlay div.days a:hover{
+    color: var(--Color02); 
+}
+
+div.Tables div.table div.back_img div.overlay table {
+    width: 100%;
+    border-collapse: collapse;
+   
+    
+}
+div.Tables div.table div.back_img div.overlay table td {
+    border: 1px solid var(--Cadaan);
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 13px;
+    color: var(--Cadaan);
+    font-family: Poppins1;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+
+
+   /* Doctor Style */
+div.Doctors{
+    width: 100%;
+    height: 100%;
+    padding: 5% 0px;
+}
+div.Doctors div.doctor{
+    width: 100%;
+    height: 100%;
+    
+   
+}
+div.Doctors div.doctor div.header{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap column;
+    
+} 
+div.Doctors div.doctor div.header h2{
+    font-family: Poppins2;
+    color: var(--Color03);
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 800;
+   
+}
+div.Doctors div.doctor div.header h2 span{
+   color: var(--Color02); 
+}
+div.Doctors div.doctor div.header img{
+    padding: 10px 0px;
+}
+div.Doctors div.doctor div.header p{
+    font-family: Poppins1;
+    color: var(--Color05);
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400; 
+    margin: 15px 0px;
+    text-align: center;
+}
+div.Doctors div.doctor div.doctor_grid{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    grid-template-rows: repeat(1, auto);
+    gap: 50px;
+    padding: 40px 0px;
+    justify-content: center;
+    align-items: center;
+    
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor{
+     background-color: var(--Cadaan);
+     border-radius: 5px;
+     box-shadow: 0px 0px 15px var(--Color08);
+     padding: 20px;
+     
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.doctor_img img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: solid 15px var(--Cadaan);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.info_doct{
+    /* width: 100%; */
+    padding: 15px 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: nowrap column;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.info_doct p{
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--Color02);
+    font-family: Poppins1;
+    font-weight: 500;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.info_doct h3{
+    font-size: 19px;
+    line-height: 23px;
+    color: var(--Color03);
+    font-family: Poppins2;
+    margin: 10px 0px;
+    font-weight: 600;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.info_doct article{
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--Color05);
+    font-family: Poppins1;
+    font-weight: 400;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.social_links{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 24px);
+    grid-template-rows: repeat(1, 24px);
+    column-gap: 15px;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.social_links div.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+}
+div.Doctors div.doctor div.doctor_grid div.Cards_doctor div.social_links div.links i{
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--Color04);
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+
+
+    /* Contact Style */
+div.Contacts{
+    width: 100%;
+    height: 100%;
+ }
+div.Contacts div.contact{
+    width: 100%;
+    height: 100%;
+ }
+div.Contacts div.contact div.Parts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: nowrap row;
+ }
+div.Contacts div.contact div.Parts div.prt{
+    width: calc(100% / 2);
+}
+div.Contacts div.contact div.Parts div.img_contact{
+   height: 100%;
+   width: 100%;
+   padding: 0px;
+   margin: 0px;
+}
+div.Contacts div.contact div.Parts form.contact-form {
+    height: 100%;
+    width: 60%;
+    margin-right: 15%;
+}
+div.Contacts div.contact div.Parts form.contact-form div.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+div.Contacts div.contact div.Parts form.contact-form input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Color06);
+    outline: none;
+    font-size: 14px;
+    border-radius: 2px;
+    resize: none;
+  }
+ div.Contacts div.contact div.Parts div.prt.img_contact iframe{
+    width: 600px;
+    height: 500px;
+ 
+  }
+ div.Contacts div.contact div.Parts form.contact-form textarea {
+    height: 120px;
+    margin: 20px 0px;
+  }
+ div.Contacts div.contact div.Parts form.contact-form button {
+    background-color: var(--Color02);
+    color: var(--Cadaan);
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 5px;
+  }
+
+div.Contacts div.contact div.Parts form.contact-form button:hover {
+    background-color: var(--Color02);
+  }
+footer {
+    font-size: 13px;
+    line-height: 25px;
+    font-family: Poppins1;
+    text-align: center;
+    background-color: var(--Cadaan);
+    color: var(--Color03);
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+}
+footer p a{
+    color: var(--Color07);
+}
+
+
+
+    /*===== Responsive design ===== */
+
+
+    /* xsm screen */
+@media  (max-width: 480px){
+     .All{
+        max-width: 465px;
+    }
+
+     /* Nav resp */
+    div.Nav-Section nav ul.links{
+        display: none;
+    }
+    div.Nav-Section nav div.btn{
+        display: none; 
+    }
+    div.Nav-Section nav{
+        grid-template-columns: 250px  1.5fr;  
+    }
+    div.Nav-Section nav div.Title{
+        font-size: 20px;
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
+    div.bar-icon{
+        margin-right: 10px;
+    }
+
+      /* Background RESPONSIVE */
+    div.videos div.background div.Title_desc h2{
+       font-size: 50px;
+       line-height: 70px; 
+       text-align: center;
+       margin: 15px 0px;
+    }
+
+        /* Program style */
+    section.Programs div.program div.captions p{
+          font-size: 11px;
+          line-height: 20px;
+          text-align: center;
+    }
+    section.Programs div.program div.card_grid{
+         grid-template-columns: repeat(1, 1fr);
+         grid-template-rows: repeat(1, auto);
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info h3{
+           font-size: 14px;
+           line-height: 20px;
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info p{
+         font-size: 12px;
+         line-height: 18px;
+          margin: 5px 0px;
+    }
+
+        /* Classes Responsive */
+    section.Classes div.Class div.grid_picture{
+       flex-flow: nowrap column; 
+    }
+    section.Classes div.Class div.grid_picture div.part1 ul li a{
+         padding: 30px 40px;
+    }
+    section.Classes div.Class div.grid_picture div.part1 div.li_btn li a{
+         padding: 30px 75px;
+    }
+    section.Classes div.Class div.grid_picture div.part2{
+          width: 100%;
+    
+    }
+
+          /* Table Responsive */
+    div.Tables div.table div.back_img div.overlay div.days a {
+         font-size: 12px;
+    }
+    div.Tables div.table div.back_img div.overlay{
+        padding: 50px 5%;
+    }
+    div.Tables div.table div.back_img div.overlay table td{
+        padding: 30px 5px;
+    }
+
+              /* Doctor Responsive */
+    div.Doctors div.doctor div.doctor_grid{
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(1, 500px);
+    }
+
+            /* Contact Responsive */
+    div.Contacts div.contact div.Parts{
+        
+        flex-flow: nowrap column;
+    }
+    div.Contacts div.contact div.Parts div.prt{
+        margin: 25px 0px;
+        width: calc(100% / 1);
+    }
+    div.Contacts div.contact div.Parts form.contact-form{
+        width: 80%;
+    }
+}
+    
+
+         /* sm screen */
+@media (min-width: 481px) and (max-width: 767px){
+      .All{
+          max-width: 750px;
+    }
+
+       /* Nav resp */
+     div.Nav-Section nav ul.links{
+        display: none;
+    }
+    div.Nav-Section nav div.btn{
+        display: none; 
+    }
+    div.Nav-Section nav{
+        grid-template-columns: 250px  1.5fr;  
+    }
+    div.Nav-Section nav div.Title{
+        font-size: 20px;
+        justify-content: center;
+    }
+    div.bar-icon{
+       margin-right: 30px; 
+    }
+
+          /* Background RESPONSIVE */
+    div.videos div.background div.Title_desc h2{
+       font-size: 70px;
+       line-height: 70px; 
+       text-align: center;
+       margin: 15px 0px;
+    }
+
+         /* Program style */
+    section.Programs div.program div.captions p{
+          font-size: 11px;
+          line-height: 20px;
+          text-align: center;
+    }
+    section.Programs div.program div.card_grid{
+         grid-template-columns: repeat(1, 1fr);
+         grid-template-rows: repeat(1, auto);
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info h3{
+           font-size: 15px;
+           line-height: 20px;
+    }
+     section.Programs div.program div.card_grid div.cards div.card_info p{
+         font-size: 12px;
+         line-height: 21px;
+         margin: 8px 0px;
+    }
+
+             /* Classes Responsive */
+    section.Classes div.Class div.Head p{
+        font-size: 12px; 
+    }
+    section.Classes div.Class div.grid_picture{
+       flex-flow: nowrap column; 
+    }
+    section.Classes div.Class div.grid_picture div.part1 ul li a{
+         padding: 30px 70px;
+    }
+    section.Classes div.Class div.grid_picture div.part1 div.li_btn li a{
+         padding: 30px 105px;
+    }
+    section.Classes div.Class div.grid_picture div.part2{
+         width: 80%;
+    
+    }
+
+      
+             /* Table Responsive */
+    div.Tables div.table div.back_img div.overlay{
+        padding: 50px 8%;
+    }
+    div.Tables div.table div.back_img div.overlay table td{
+        padding: 40px 5px;
+    }
+
+            /* Doctor Responsive */
+    div.Doctors div.doctor div.doctor_grid{
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(1, 500px);
+    }
+
+            /* Contact Responsive */
+    div.Contacts div.contact div.Parts{
+        
+        flex-flow: nowrap column;
+    }
+    div.Contacts div.contact div.Parts div.prt{
+        margin: 25px 0px;
+        width: calc(100% / 1);
+    }
+    div.Contacts div.contact div.Parts form.contact-form{
+        width: 70%;
+    }
+}
+
+
+
+      /* MD screen */
+@media (min-width: 768px) and (max-width: 992px){
+    .All{
+          max-width: 960px;
+    }
+
+             /* Nav Responsive */
+    div.bar-icon{
+        display: none;
+    }
+    div.Nav-Section nav div.Title{
+        justify-content: flex-start;
+    }
+    div.Nav-Section nav ul.links li{
+         margin: 0px 10px;
+    }
+    div.Nav-Section nav ul.links li a{
+         font-size: 11px;
+         line-height: 30px;
+    }
+     div.Nav-Section nav{
+        grid-template-columns: 250px  1fr;  
+    }
+    div.Nav-Section nav div.Title{
+        font-size: 20px;
+        margin-left: 15px;
+    }
+    div.Nav-Section nav ul.links{
+        justify-content: flex-end; 
+    }
+    div.MobileNav{
+        display: none;
+    }
+     
+            /* Background RESPONSIVE */
+    div.videos div.background div.Title_desc h2{
+       font-size: 65px;
+       line-height: 70px; 
+       text-align: center;
+       margin: 15px 0px;
+    }
+
+       /* Program style */
+    section.Programs div.program div.captions p{
+          font-size: 11px;
+          line-height: 20px;
+          text-align: center;
+    }
+    section.Programs div.program div.card_grid{
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(3, auto);
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info h3{
+         font-size: 15px;
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info p{
+         font-size: 11px;
+         line-height: 18px;
+         margin: 5px 0px;
+    }
+
+                   /* Classes Responsive */
+    section.Classes div.Class div.grid_picture{
+       flex-flow: nowrap column; 
+    }
+    section.Classes div.Class div.grid_picture div.part1 ul li a{
+         padding: 30px 80px;
+    }
+    section.Classes div.Class div.grid_picture div.part1 div.li_btn li a{
+         padding: 30px 120px;
+    }
+    section.Classes div.Class div.grid_picture div.part2{
+         width: 75%;
+    
+    }
+
+      /* Table Responsive */
+    div.Tables div.table div.back_img div.overlay{
+        padding: 50px 10%;
+    }
+    div.Tables div.table div.back_img div.overlay table td{
+        padding: 40px 5px;
+    }
+
+            /* Doctor Responsive */
+    div.Doctors div.doctor div.doctor_grid{
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(1, 500px);
+    }
+
+            /* Contact Responsive */
+    div.Contacts div.contact div.Parts{
+        
+        flex-flow: nowrap column;
+    }
+    div.Contacts div.contact div.Parts div.prt{
+        margin: 25px 0px;
+        width: calc(100% / 1);
+    }
+    div.Contacts div.contact div.Parts form.contact-form{
+        width: 55%;
+    }
+}
+   
+
+
+         /* LG screen */
+@media (min-width: 992px) and (max-width: 1200px){
+    .All{
+          max-width: 1100px;
+    }
+       
+               /* Nav Responsive */
+    div.bar-icon{
+        display: none;
+    }
+    div.Nav-Section nav{
+         justify-content: center;
+    }
+    div.Nav-Section nav div.Title{
+        font-size: 26px;
+        justify-content: flex-end;
+    }
+     div.Nav-Section nav{
+        grid-template-columns: 300px  1fr;  
+    }
+    div.Nav-Section nav ul.links{
+        margin-right: 15px;
+      justify-content: flex-end;   
+    }
+    div.Nav-Section nav ul.links li{
+         margin: 0px 8px;
+    }
+     div.MobileNav{
+        display: none;
+    }
+
+        /* Background RESPONSIVE */
+    div.videos div.background div.Title_desc h2{
+         margin: 20px 0px;
+    }
+
+              /* Program style */
+    section.Programs div.program div.card_grid div.cards div.card_info h3{
+         font-size: 16px;
+    }
+    section.Programs div.program div.card_grid div.cards div.card_info p{
+         font-size: 12px;
+         line-height: 20px;
+         margin: 7px 0px;
+    }
+                   /* Classes Responsive */
+    section.Classes div.Class div.grid_picture div.part1 ul li a{
+         padding: 30px 45px;
+    }
+    section.Classes div.Class div.grid_picture div.part1 div.li_btn li a{
+         padding: 30px 80px;
+    }
+    section.Classes div.Class div.grid_picture div.part2{
+         width: 60%;
+    }
+    section.Classes div.Class div.grid_picture div.part2 div.down_picture p{
+         margin: 10px 0px;
+         line-height: 20px;
+    }
+
+            /* Table Responsive */
+    div.Tables div.table div.back_img div.overlay{
+        padding: 50px 15%;
+    }
+    div.Tables div.table div.back_img div.overlay table td{
+        padding: 40px 5px;
+    }
+      
+            /* Doctor Responsive */
+    div.Doctors div.doctor div.doctor_grid{
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(1, 500px);
+    }
+            /* Contact Responsive */
+    div.Contacts div.contact div.Parts form.contact-form{
+        width: 90%;
+        margin-left: 4%;
+        margin-right: 5%;
+    }
+    
+}
+
+
+
+
+       /* XLG screen */
+@media (min-width: 1200px) and (max-width: 1400px){
+    .All{
+         max-width: 1350px;
+    }
+
+       /* Nav Responsive */
+     div.bar-icon{
+        display: none;
+    }
+     div.MobileNav{
+        display: none;
+    }
+}
+
+
+
+       /* XXLG screen */
+@media (min-width: 1400px) {
+    .All{
+        max-width: 1300px;
+    }
+
+          /* Nav Responsive */
+     div.bar-icon{
+        display: none;
+    }
+     div.MobileNav{
+        display: none;
+    }
+}
+
+
+
+
